@@ -34,7 +34,7 @@ export const useAuthStore = defineStore('auth', () => {
       .then((userCredential) => {
         const user = userCredential.user;
         authUser.value = user;
-        router.push({ name: 'admin' });
+        router.push({ name: 'dashboard' });
       })
       .catch((error) => {
         alertLog.mensaje = errorCodes[error.code];

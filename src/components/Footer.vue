@@ -170,7 +170,7 @@
       <ul
         class="flex flex-col px-4 py-4 gap-2 md:flex-row md:justify-center md:items-center"
       >
-        Made with 💚 and:
+        Made with:
 
         <li>
           <a

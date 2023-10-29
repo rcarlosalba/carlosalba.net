@@ -42,7 +42,7 @@ const auth = useAuthStore();
     >
     <RouterLink
       class="block w-full py-2"
-      :to="{ name: 'admin' }"
+      :to="{ name: 'dashboard' }"
       >Admin</RouterLink
     >
     <span class="hidden md:flex self-center"> | </span>

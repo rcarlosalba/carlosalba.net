@@ -1,9 +1,6 @@
 <script setup>
-import usePosts from '../composables/usePosts';
-import useProyectos from '../composables/useProyectos';
-
-const { postsCollection } = usePosts();
-const { proyectosCollection } = useProyectos();
+import { useFirebaseService } from '../../services/FirebaseService';
+const { proyectosCollection, postsCollection } = useFirebaseService();
 </script>
 
 <template>

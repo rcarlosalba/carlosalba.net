@@ -101,7 +101,7 @@ const handleSubmit = async (data) => {
         type="textarea"
         label="Introducción: "
         rows="2"
-        name="intro"
+        name="introduccion"
         placeholder="Ingresa la Introducción de la Publicación"
         prefix-icon="text"
         help="Ingresa la Introducción del post"
@@ -114,7 +114,7 @@ const handleSubmit = async (data) => {
       <FormKit
         type="textarea"
         label="Contenido: "
-        name="content"
+        name="contenido"
         placeholder="Ingresa el contenido de la Publicación"
         prefix-icon="text"
         help="Ingresa el contenido del post"

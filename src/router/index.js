@@ -58,6 +58,11 @@ const router = createRouter({
       meta: { requiresAuth: true },
       children: [
         {
+          path: 'dashboard',
+          name: 'dashboard',
+          component: () => import('../views/manage/AdminLayoutView.vue'),
+        },
+        {
           path: 'newblog',
           name: 'new-blog',
           component: () => import('../views/manage/blog/NewBlogView.vue'),
