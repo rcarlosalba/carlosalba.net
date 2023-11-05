@@ -1,5 +1,5 @@
 <script setup>
-import { useFirebaseService } from '../../services/FirebaseService';
+import { useFirebaseService } from '../services/FirebaseService';
 const { proyectosCollection, postsCollection } = useFirebaseService();
 </script>
 

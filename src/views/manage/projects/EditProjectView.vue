@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, onMounted } from 'vue';
+import { reactive, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useFirestore, useDocument } from 'vuefire';
 import { doc, updateDoc } from 'firebase/firestore';
@@ -29,8 +29,9 @@ const tecnologias = [
 ];
 
 const formData = reactive({});
-onMounted(() => {
-  Object.assign(formData, proyectoToEdit.value);
+
+watch(proyectoToEdit, (proyectoToEdit) => {
+  Object.assign(formData, proyectoToEdit);
 });
 
 const handleSubmit = async (data) => {
@@ -48,7 +49,7 @@ const handleSubmit = async (data) => {
     };
     await updateDoc(docRef, data);
   }
-  router.push({ name: 'admin-projects' });
+  router.push({ name: 'dashboard' });
 };
 </script>
 
@@ -104,7 +105,7 @@ const handleSubmit = async (data) => {
           required: 'El nombre del proyecto es obligatorio',
         }"
         validation-visibility="submit"
-        v-model="formData.project"
+        v-model="formData.titulo"
       >
       </FormKit>
       <FormKit

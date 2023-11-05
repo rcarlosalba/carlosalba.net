@@ -129,6 +129,12 @@ const handleSubmit = async (data) => {
         help="Fecha de Publicación"
         validation="required"
       >
+        <FormKit
+          type="date"
+          label="Fecha de Actualización: "
+          name="updateDate"
+          help="Fecha de Actualización"
+        />
       </FormKit>
       <FormKit
         type="select"

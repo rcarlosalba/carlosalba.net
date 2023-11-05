@@ -8,7 +8,7 @@ const auth = useAuthStore();
 
 const handleSubmit = (data) => {
   auth.login(data.email, data.password);
-  router.push({ name: 'admin' });
+  router.push({ name: 'dashboard' });
 };
 </script>
 

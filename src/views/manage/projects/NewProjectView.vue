@@ -32,7 +32,7 @@ const handleSubmit = async (data) => {
     imagen: isThereImage.value,
   });
   if (docRef.id) {
-    router.push({ name: 'admin' });
+    router.push({ name: 'dashboard' });
   }
 };
 </script>

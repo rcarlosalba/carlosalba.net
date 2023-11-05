@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, onMounted } from 'vue';
+import { reactive, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useFirestore, useDocument } from 'vuefire';
 import { doc, updateDoc } from 'firebase/firestore';
@@ -24,8 +24,9 @@ const categorias = [
 ];
 
 const formData = reactive({});
-onMounted(() => {
-  Object.assign(formData, postToEdit.value);
+
+watch(postToEdit, (postToEdit) => {
+  Object.assign(formData, postToEdit);
 });
 
 const handleSubmit = async (data) => {
@@ -42,7 +43,7 @@ const handleSubmit = async (data) => {
     };
     await updateDoc(docRef, data);
   }
-  router.push({ name: 'admin-blog' });
+  router.push({ name: 'dashboard' });
 };
 </script>
 
@@ -163,7 +164,7 @@ const handleSubmit = async (data) => {
         validation="required"
         :validation-messages="{ required: 'La Categoría es obligatoria' }"
         :options="categorias"
-        v-model="formData.categorias"
+        v-model="formData.categoria"
       >
       </FormKit>
       <FormKit
