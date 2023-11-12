@@ -64,12 +64,12 @@ defineEmits(['delete-post', 'delete-project']);
   </div>
   <div v-if="route.name === 'portfolio'">
     <div class="rounded-lg">
-      <h1
-        class="text-lg text-center text-ca-darkblue md:text-xl font-semibold p-2"
-      >
-        {{ project.titulo }}
-      </h1>
       <div class="max-h-44 overflow-hidden">
+        <h1
+          class="text-lg text-center text-ca-darkblue md:text-xl font-semibold p-2 truncate"
+        >
+          {{ project.titulo }}
+        </h1>
         <img
           :src="project.imagen"
           :alt="project.titulo"

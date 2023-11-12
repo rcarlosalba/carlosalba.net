@@ -93,7 +93,9 @@ const { proyectosCollection, postsCollection } = useFirebaseService();
           <h3 class="text-xl font-semibold text-ca-darkblue">
             {{ proyecto.titulo }}
           </h3>
-          <p class="text-gray-500">{{ proyecto.description }}</p>
+          <p class="text-gray-500 truncate">
+            {{ proyecto.description }}
+          </p>
           <RouterLink
             class="text-ca-darkblue font-semibold text-xl block mt-2 hover:text-ca-lightblue transition-all"
             :to="{ name: 'project', params: { id: proyecto.id } }"
@@ -123,7 +125,7 @@ const { proyectosCollection, postsCollection } = useFirebaseService();
               class="rounded-md object-cover"
             />
           </div>
-          <p class="text-gray-500">{{ proyecto.description }}</p>
+          <p class="text-gray-500 truncate">{{ proyecto.description }}</p>
           <RouterLink
             class="text-ca-darkblue font-semibold text-xl block mt-2 hover:text-ca-lightblue transition-all"
             :to="{ name: 'project', params: { id: proyecto.id } }"
