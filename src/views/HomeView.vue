@@ -15,7 +15,7 @@ const { proyectosCollection, postsCollection } = useFirebaseService();
   <main class="w-full mx-auto mb-4">
     <!-- destacado -->
     <div
-      v-for="post in postsCollection.slice(0, 1)"
+      v-for="post in postsCollection.slice(2, 3)"
       :key="post.id"
       class="destacado mx-auto"
     >
@@ -30,7 +30,7 @@ const { proyectosCollection, postsCollection } = useFirebaseService();
           />
         </div>
         <div>
-          <h3 class="text-xl font-semibold text-ca-darkblue">
+          <h3 class="text-xl font-semibold text-ca-darkblue truncate">
             {{ post.titulo }}
           </h3>
           <p class="text-gray-500">{{ post.intro }}</p>
@@ -53,7 +53,7 @@ const { proyectosCollection, postsCollection } = useFirebaseService();
           :key="post.id"
           class="bg-white shadow-md rounded-md p-4"
         >
-          <h3 class="text-xl font-semibold text-ca-darkblue">
+          <h3 class="text-xl font-semibold truncate text-ca-darkblue">
             {{ post.titulo }}
           </h3>
           <div class="max-h-44 overflow-hidden">
@@ -75,7 +75,7 @@ const { proyectosCollection, postsCollection } = useFirebaseService();
     </section>
     <!-- destacado -->
     <div
-      v-for="proyecto in proyectosCollection.slice(0, 1)"
+      v-for="proyecto in proyectosCollection.slice(1, 2)"
       :key="proyecto.id"
       class="destacado mx-auto"
     >
@@ -90,7 +90,7 @@ const { proyectosCollection, postsCollection } = useFirebaseService();
           />
         </div>
         <div>
-          <h3 class="text-xl font-semibold text-ca-darkblue">
+          <h3 class="text-xl font-semibold text-ca-darkblue truncate">
             {{ proyecto.titulo }}
           </h3>
           <p class="text-gray-500 truncate">
@@ -115,7 +115,7 @@ const { proyectosCollection, postsCollection } = useFirebaseService();
           :key="proyecto.id"
           class="bg-white shadow-md rounded-md p-4"
         >
-          <h3 class="text-xl font-semibold text-ca-darkblue">
+          <h3 class="text-xl font-semibold text-ca-darkblue truncate">
             {{ proyecto.titulo }}
           </h3>
           <div class="max-h-44 overflow-hidden">

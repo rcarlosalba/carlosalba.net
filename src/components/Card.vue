@@ -1,9 +1,12 @@
 <script setup>
 import { useAuthStore } from '../stores/auth';
 import { useRoute } from 'vue-router';
-
+import usePosts from '../composables/usePosts';
+import useProyectos from '../composables/useProyectos';
 const auth = useAuthStore();
 const route = useRoute();
+const { deletePost } = usePosts();
+const { deleteProject } = useProyectos();
 
 defineProps({
   blog: {
@@ -13,8 +16,6 @@ defineProps({
     type: Object,
   },
 });
-
-defineEmits(['delete-post', 'delete-project']);
 </script>
 
 <template>
@@ -47,7 +48,7 @@ defineEmits(['delete-post', 'delete-project']);
         </RouterLink>
         <button
           class="text-sm py-2 px-10 rounded-full bg-ca-darkblue"
-          @click="$emit('delete-post', blog.id, blog.imagen)"
+          @click="deletePost(blog.id, blog.imagen)"
         >
           Eliminar
         </button>
@@ -88,7 +89,7 @@ defineEmits(['delete-post', 'delete-project']);
         </RouterLink>
         <button
           class="text-sm py-2 px-10 rounded-full bg-ca-darkblue"
-          @click="$emit('delete-post', project.id, project.imagen)"
+          @click="deleteProject(project.id, project.imagen)"
         >
           Eliminar
         </button>

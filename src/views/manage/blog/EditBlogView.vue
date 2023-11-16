@@ -58,6 +58,7 @@ const handleSubmit = async (data) => {
       :actions="false"
       incomplete-message=":-( no hemos podido enviar el contenido, revisa cada uno de los campos"
       @submit="handleSubmit"
+      :value="formData"
     >
       <FormKit
         type="file"
