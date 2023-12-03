@@ -22,8 +22,8 @@ const post = useDocument(docRef);
     >
       {{ post?.titulo }}
     </h1>
-    <p class="p-4">{{ post?.intro }}</p>
-    <p class="p-4">{{ post?.content }}</p>
+    <p class="p-4">{{ post?.introduccion }}</p>
+    <p class="p-4">{{ post?.contenido }}</p>
     <p class="italic my-4 px-6">{{ post?.cta }}</p>
     <p class="text-center">Categoría: {{ post?.categoria }}</p>
   </div>

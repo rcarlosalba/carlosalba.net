@@ -46,7 +46,7 @@ const handleSubmit = (data) => {
         label="Contraseña: "
         name="password"
         placeholder="Ingresa tu Contraseña"
-        prefix-icon="lock"
+        prefix-icon="password"
         help="Ingresa tu Contraseña"
         validation="required|?length:8"
         :validation-messages="{
