@@ -1,5 +1,5 @@
 import { VueFire, VueFireAuth } from 'vuefire';
-import { firebaseApp } from '../config/firebase';
+import { firebaseApp } from './config/firebase';
 import { plugin, defaultConfig } from '@formkit/vue';
 import theme from '../formkit.config';
 import './assets/main.css';

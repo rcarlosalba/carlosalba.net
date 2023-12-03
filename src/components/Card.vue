@@ -34,7 +34,9 @@ defineProps({
         {{ blog.titulo }}
       </h1>
       <div class="max-h-44 overflow-hidden">
-        <p class="p-4 h-28 text-clip overflow-hidden ...">{{ blog.intro }}</p>
+        <p class="p-4 h-28 text-clip overflow-hidden ...">
+          {{ blog.introduccion }}
+        </p>
       </div>
       <div
         v-if="auth.isAuth"
